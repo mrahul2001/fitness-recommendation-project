@@ -25,7 +25,10 @@ public class User {
     @Enumerated(EnumType.STRING)
     private UserRole role = UserRole.USER;
 
-    @Column(nullable = false)
+    @Column(unique = true, nullable = true)
+    private String googleId;
+
+    @Column(nullable = true)
     private String password;
 
     @Column(updatable = false)

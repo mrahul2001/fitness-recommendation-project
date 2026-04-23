@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7bd9cf76-e4d5-43ef-b5fd-dcfa10614861" name="Changes" comment="activity service implementation">
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/com/pm/usersservice/dto/FindOrCreateUserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/com/pm/usersservice/dto/UserAuthResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/com/pm/usersservice/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/java/com/pm/usersservice/model/User.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;mrahul2001&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/mrahul2001/fitness-recommendation-project.git&quot;,
+    &quot;accountId&quot;: &quot;2bba148c-9882-4b79-ad51-20637746543d&quot;
+  }
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3CLrD6u6YVr3AwdjMxi3bIyq5WW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ActivitiesServiceApplication.executor": "Debug",
+    "Docker.activites-service-db.executor": "Run",
+    "Docker.activities-service-db.executor": "Run",
+    "Docker.users-service-db.executor": "Run",
+    "Docker.users-service.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.ActivitiesServiceApplication.executor": "Run",
+    "Spring Boot.EurekaApplication.executor": "Run",
+    "Spring Boot.FitnessRecommendationAppApplication.executor": "Run",
+    "Spring Boot.UsersServiceApplication.executor": "Run",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "master",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/mitra/Desktop/fitness-recommendation-app",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "profiler.jvm",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mongo",
+      "postgresql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mitra\Desktop\fitness-recommendation-app\activities-service\src\main\java\com\pm\activitiesservice" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.pm.activitiesservice.exception" />
+      <recent name="com.pm.activitiesservice.dto" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="KtorApplicationConfigurationType" />
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="configurationStatuses">
+      <map>
+        <entry key="SpringBootApplicationConfigurationType">
+          <value>
+            <map>
+              <entry key="ActivitiesServiceApplication" value="STOPPED" />
+              <entry key="EurekaApplication" value="STOPPED" />
+              <entry key="UsersServiceApplication" value="FAILED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.UsersServiceApplication">
+    <configuration name="ActivitiesServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.pm.activitiesservice.ActivitiesServiceApplication" />
+      <module name="activities-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.pm.activitiesservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ActivitiesServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="activities-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.pm.activitiesservice.ActivitiesServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="eureka" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.pm.eureka.EurekaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UsersServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="users-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.pm.usersservice.UsersServiceApplication" />
+      <option name="VM_PARAMETERS" value="-Duser.timezone=Asia/Kolkata" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="activities-service-db" type="docker-deploy" factoryName="docker-image" server-name="Docker">
+      <deployment type="docker-image">
+        <settings>
+          <option name="imageTag" value="mongo:latest" />
+          <option name="containerName" value="activities-service-db" />
+          <option name="envVars">
+            <list>
+              <DockerEnvVarImpl>
+                <option name="name" value="MONGO_INITDB_DATABASE" />
+                <option name="value" value="activities-db" />
+              </DockerEnvVarImpl>
+              <DockerEnvVarImpl>
+                <option name="name" value="MONGO_INITDB_ROOT_PASSWORD" />
+                <option name="value" value="Ranaghat1" />
+              </DockerEnvVarImpl>
+              <DockerEnvVarImpl>
+                <option name="name" value="MONGO_INITDB_ROOT_USERNAME" />
+                <option name="value" value="rahul2711" />
+              </DockerEnvVarImpl>
+            </list>
+          </option>
+          <option name="portBindings">
+            <list>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="27017" />
+                <option name="hostPort" value="27018" />
+              </DockerPortBindingImpl>
+            </list>
+          </option>
+          <option name="commandLineOptions" value="--network internal" />
+          <option name="volumeBindings">
+            <list>
+              <DockerVolumeBindingImpl>
+                <option name="containerPath" value="/data/db" />
+                <option name="hostPath" value="C:\Users\mitra\Desktop\db_volumes\activites-service-db" />
+              </DockerVolumeBindingImpl>
+            </list>
+          </option>
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="users-service-db" type="docker-deploy" factoryName="docker-image" server-name="Docker">
+      <deployment type="docker-image">
+        <settings>
+          <option name="imageTag" value="postgres:latest" />
+          <option name="containerName" value="users-service-db" />
+          <option name="envVars">
+            <list>
+              <DockerEnvVarImpl>
+                <option name="name" value="POSTGRES_DB" />
+                <option name="value" value="db" />
+              </DockerEnvVarImpl>
+              <DockerEnvVarImpl>
+                <option name="name" value="POSTGRES_PASSWORD" />
+                <option name="value" value="Ranaghat@1" />
+              </DockerEnvVarImpl>
+              <DockerEnvVarImpl>
+                <option name="name" value="POSTGRES_USER" />
+                <option name="value" value="rahul2001" />
+              </DockerEnvVarImpl>
+            </list>
+          </option>
+          <option name="portBindings">
+            <list>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="5432" />
+                <option name="hostPort" value="5433" />
+              </DockerPortBindingImpl>
+            </list>
+          </option>
+          <option name="commandLineOptions" value="--network internal" />
+          <option name="volumeBindings">
+            <list>
+              <DockerVolumeBindingImpl>
+                <option name="containerPath" value="/var/lib/postgresql" />
+                <option name="hostPath" value="C:\Users\mitra\Desktop\db_volumes\users-service-db" />
+              </DockerVolumeBindingImpl>
+            </list>
+          </option>
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="users-service" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="users-service:latest" />
+          <option name="containerName" value="users-service" />
+          <option name="portBindings">
+            <list>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="4001" />
+                <option name="hostPort" value="4001" />
+              </DockerPortBindingImpl>
+            </list>
+          </option>
+          <option name="commandLineOptions" value="--network internal" />
+          <option name="sourceFilePath" value="users-service/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.ActivitiesServiceApplication" />
+      <item itemvalue="Docker.activities-service-db" />
+      <item itemvalue="Docker.users-service-db" />
+      <item itemvalue="Docker.users-service" />
+      <item itemvalue="Spring Boot.EurekaApplication" />
+      <item itemvalue="Spring Boot.ActivitiesServiceApplication" />
+      <item itemvalue="Spring Boot.UsersServiceApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ActivitiesServiceApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.32098.37" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.32098.37" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7bd9cf76-e4d5-43ef-b5fd-dcfa10614861" name="Changes" comment="" />
+      <created>1776175571172</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1776175571172</updated>
+      <workItem from="1776175572757" duration="6550000" />
+      <workItem from="1776187180149" duration="456000" />
+      <workItem from="1776189295962" duration="1363000" />
+      <workItem from="1776221815570" duration="1120000" />
+      <workItem from="1776407541220" duration="734000" />
+      <workItem from="1776603778445" duration="10140000" />
+      <workItem from="1776693831063" duration="1840000" />
+      <workItem from="1776695816791" duration="294000" />
+      <workItem from="1776696136808" duration="3714000" />
+      <workItem from="1776779227717" duration="10061000" />
+      <workItem from="1776866068378" duration="2920000" />
+      <workItem from="1776877243460" duration="2263000" />
+      <workItem from="1776949124922" duration="5720000" />
+      <workItem from="1776957741225" duration="254000" />
+      <workItem from="1776958014961" duration="825000" />
+      <workItem from="1776958868942" duration="194000" />
+      <workItem from="1776959093801" duration="612000" />
+    </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <option name="closed" value="true" />
+      <created>1776175925404</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1776175925404</updated>
+    </task>
+    <task id="LOCAL-00002" summary="user service implementation">
+      <option name="closed" value="true" />
+      <created>1776693967845</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1776693967846</updated>
+    </task>
+    <task id="LOCAL-00003" summary="activity service implementation">
+      <option name="closed" value="true" />
+      <created>1776879624205</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1776879624206</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <MESSAGE value="user service implementation" />
+    <MESSAGE value="activity service implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="activity service implementation" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/fitness_recommendation_app$ActivitiesServiceApplication.ic" NAME="ActivitiesServiceApplication Coverage Results" MODIFIED="1776957643628" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+  </component>
+</project>
