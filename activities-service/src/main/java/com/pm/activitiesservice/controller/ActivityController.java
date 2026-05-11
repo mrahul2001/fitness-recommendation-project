@@ -27,13 +27,14 @@ public class ActivityController {
         return ResponseEntity.ok(activityService.getAllActivities());
     }
 
+
     @GetMapping(value = "/", params = "userID")
     public ResponseEntity<List<ActivityResponseDTO>> getAllActivitiesByUserID(@RequestParam UUID userID) {
         return ResponseEntity.ok(activityService.getAllActivitiesByUserID(userID));
     }
 
     @GetMapping("/{activityID}")
-    public ResponseEntity<ActivityResponseDTO> getActivity(@PathVariable("activityID") String activityID) {
+    public ResponseEntity<ActivityResponseDTO> getActivity(@PathVariable String activityID) {
         return ResponseEntity.ok(activityService.getActivityByID(activityID));
     }
 }

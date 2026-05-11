@@ -4,11 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bd9cf76-e4d5-43ef-b5fd-dcfa10614861" name="Changes" comment="activity service implementation">
-      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/com/pm/usersservice/dto/FindOrCreateUserDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/com/pm/usersservice/dto/UserAuthResponseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/pom.xml" afterDir="false" />
+    <list default="true" id="7bd9cf76-e4d5-43ef-b5fd-dcfa10614861" name="Changes" comment="eureka service implementation">
+      <change afterPath="$PROJECT_DIR$/activities-service/src/main/java/com/pm/activitiesservice/config/RabbitMQConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/activities-service/src/main/java/com/pm/activitiesservice/config/WebClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/activities-service/src/main/java/com/pm/activitiesservice/service/UserValidationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/authservice/config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/authservice/config/OAuth2SuccessHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/authservice/config/PasswordEncoderConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/authservice/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/authservice/controller/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/authservice/dto/LoginRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/authservice/dto/TokenValidationResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/authservice/dto/UserResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/authservice/dto/UserServiceRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/authservice/dto/UserServiceResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/authservice/model/AuthProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/authservice/model/UserRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/authservice/service/AuthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/authservice/service/JwtService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/authservice/service/UsersServiceClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/com/pm/usersservice/model/AuthProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/activities-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/activities-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/activities-service/src/main/java/com/pm/activitiesservice/controller/ActivityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/activities-service/src/main/java/com/pm/activitiesservice/controller/ActivityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/activities-service/src/main/java/com/pm/activitiesservice/service/ActivityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/activities-service/src/main/java/com/pm/activitiesservice/service/ActivityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/activities-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/activities-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/com/pm/usersservice/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/java/com/pm/usersservice/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/com/pm/usersservice/controller/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/java/com/pm/usersservice/controller/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/com/pm/usersservice/dto/FindOrCreateUserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/java/com/pm/usersservice/dto/FindOrCreateRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/com/pm/usersservice/dto/UserAuthResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/authservice/dto/AuthResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/com/pm/usersservice/dto/UserRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/java/com/pm/usersservice/dto/UserRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/com/pm/usersservice/dto/UserResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/java/com/pm/usersservice/dto/UserResponseDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users-service/src/main/java/com/pm/usersservice/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/java/com/pm/usersservice/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/com/pm/usersservice/respository/UsersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/java/com/pm/usersservice/respository/UsersRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/com/pm/usersservice/service/UsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/java/com/pm/usersservice/service/UsersService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +107,7 @@
     "Application.ActivitiesServiceApplication.executor": "Debug",
     "Docker.activites-service-db.executor": "Run",
     "Docker.activities-service-db.executor": "Run",
+    "Docker.rabbitmq.executor": "Run",
     "Docker.users-service-db.executor": "Run",
     "Docker.users-service.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -87,6 +120,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "Spring Boot.ActivitiesServiceApplication.executor": "Run",
+    "Spring Boot.AuthServiceApplication.executor": "Run",
     "Spring Boot.EurekaApplication.executor": "Run",
     "Spring Boot.FitnessRecommendationAppApplication.executor": "Run",
     "Spring Boot.UsersServiceApplication.executor": "Run",
@@ -120,6 +154,8 @@
       <recent name="C:\Users\mitra\Desktop\fitness-recommendation-app\activities-service\src\main\java\com\pm\activitiesservice" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.pm.authservice.dto" />
+      <recent name="com.pm.authservice.model" />
       <recent name="com.pm.activitiesservice.exception" />
       <recent name="com.pm.activitiesservice.dto" />
     </key>
@@ -139,6 +175,7 @@
           <value>
             <map>
               <entry key="ActivitiesServiceApplication" value="STOPPED" />
+              <entry key="AuthServiceApplication" value="STOPPED" />
               <entry key="EurekaApplication" value="STOPPED" />
               <entry key="UsersServiceApplication" value="FAILED" />
             </map>
@@ -147,7 +184,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.UsersServiceApplication">
+  <component name="RunManager" selected="Spring Boot.ActivitiesServiceApplication">
     <configuration name="ActivitiesServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.pm.activitiesservice.ActivitiesServiceApplication" />
       <module name="activities-service" />
@@ -164,6 +201,17 @@
     <configuration name="ActivitiesServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="activities-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.pm.activitiesservice.ActivitiesServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <envs>
+        <env name="GOOGLE_CLIENT_ID" value="222057383543-lrpiuen7mtsms6cs4ot41rh9ggpc37ou.apps.googleusercontent.com" />
+        <env name="GOOGLE_CLIENT_SECRET" value="4/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" />
+      </envs>
+      <module name="auth-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.pm.authservice.AuthServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -221,6 +269,28 @@
               </DockerVolumeBindingImpl>
             </list>
           </option>
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="rabbitmq" type="docker-deploy" factoryName="docker-image" server-name="Docker">
+      <deployment type="docker-image">
+        <settings>
+          <option name="imageTag" value="rabbitmq:4-management" />
+          <option name="containerName" value="rabbitmq" />
+          <option name="portBindings">
+            <list>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="5672" />
+                <option name="hostPort" value="5672" />
+              </DockerPortBindingImpl>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="15672" />
+                <option name="hostPort" value="15672" />
+              </DockerPortBindingImpl>
+            </list>
+          </option>
+          <option name="commandLineOptions" value="--network internal" />
         </settings>
       </deployment>
       <method v="2" />
@@ -288,9 +358,11 @@
     </configuration>
     <list>
       <item itemvalue="Application.ActivitiesServiceApplication" />
+      <item itemvalue="Docker.rabbitmq" />
       <item itemvalue="Docker.activities-service-db" />
       <item itemvalue="Docker.users-service-db" />
       <item itemvalue="Docker.users-service" />
+      <item itemvalue="Spring Boot.AuthServiceApplication" />
       <item itemvalue="Spring Boot.EurekaApplication" />
       <item itemvalue="Spring Boot.ActivitiesServiceApplication" />
       <item itemvalue="Spring Boot.UsersServiceApplication" />
@@ -332,7 +404,17 @@
       <workItem from="1776957741225" duration="254000" />
       <workItem from="1776958014961" duration="825000" />
       <workItem from="1776958868942" duration="194000" />
-      <workItem from="1776959093801" duration="612000" />
+      <workItem from="1776959093801" duration="4706000" />
+      <workItem from="1777040509475" duration="5505000" />
+      <workItem from="1777129170324" duration="4402000" />
+      <workItem from="1777309560149" duration="1799000" />
+      <workItem from="1777615484608" duration="128000" />
+      <workItem from="1778162626836" duration="1881000" />
+      <workItem from="1778246568652" duration="772000" />
+      <workItem from="1778309654292" duration="709000" />
+      <workItem from="1778331980892" duration="9290000" />
+      <workItem from="1778418854835" duration="5074000" />
+      <workItem from="1778500710094" duration="10517000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -358,7 +440,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776879624206</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="eureka service implementation">
+      <option name="closed" value="true" />
+      <created>1776959986161</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1776959986161</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,7 +458,8 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="user service implementation" />
     <MESSAGE value="activity service implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="activity service implementation" />
+    <MESSAGE value="eureka service implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="eureka service implementation" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/fitness_recommendation_app$ActivitiesServiceApplication.ic" NAME="ActivitiesServiceApplication Coverage Results" MODIFIED="1776957643628" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />

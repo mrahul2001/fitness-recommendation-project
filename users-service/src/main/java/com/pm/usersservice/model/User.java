@@ -25,8 +25,11 @@ public class User {
     @Enumerated(EnumType.STRING)
     private UserRole role = UserRole.USER;
 
+    @Enumerated(EnumType.STRING)
+    private AuthProvider authProvider;
+
     @Column(unique = true, nullable = true)
-    private String googleId;
+    private String providerId;
 
     @Column(nullable = true)
     private String password;

@@ -7,6 +7,9 @@ import com.pm.activitiesservice.exception.UserNotFoundException;
 import com.pm.activitiesservice.model.Activity;
 import com.pm.activitiesservice.repository.ActivityRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,11 +18,25 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class ActivityService {
 
+    @Value("${rabbitmq.exchange.name}")
+    private String exchange;
+    @Value("${rabbitmq.routing.key}")
+    private String routingKey;
+
     private final ActivityRepository activityRepository;
+    private final UserValidationService userValidationService;
+    private final RabbitTemplate rabbitTemplate;
 
     public ActivityResponseDTO createActivity(ActivityRequestDTO body) {
+        boolean isValid = userValidationService.validateUser(body.getUserID());
+
+        if (!isValid) {
+            throw new UserNotFoundException("User not found");
+        }
+
         Activity activity = Activity.builder()
                 .userID(body.getUserID())
                 .activityType(body.getActivityType())
@@ -30,7 +47,9 @@ public class ActivityService {
                 .build();
 
         Activity savedActivity = activityRepository.save(activity);
-
+        log.info("Publishing activity to RabbitMQ → exchange={}, routingKey={}", exchange, routingKey);
+        rabbitTemplate.convertAndSend(exchange, routingKey, savedActivity);
+        log.info("Message published to RabbitMQ");
         return activityModelToResponseDTO(savedActivity);
 
     }

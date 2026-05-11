@@ -1,5 +1,6 @@
 package com.pm.usersservice.dto;
 
+import com.pm.usersservice.model.AuthProvider;
 import com.pm.usersservice.model.UserRole;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -19,9 +20,9 @@ public class UserRequestDTO {
     )
     private String password;
 
-
     private UserRole userRole;
-
+    private AuthProvider authProvider;
+    private String providerId;
     private String firstName;
     private String lastName;
 }

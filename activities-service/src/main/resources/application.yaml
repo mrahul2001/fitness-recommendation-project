@@ -18,3 +18,10 @@ eureka:
   instance:
     prefer-ip-address: false
 
+rabbitmq:
+  exchange:
+    name: fitness.exchange
+  queue:
+    name: activity.queue
+  routing:
+    key: activity.tracking

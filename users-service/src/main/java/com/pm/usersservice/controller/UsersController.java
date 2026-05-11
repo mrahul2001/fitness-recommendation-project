@@ -1,8 +1,8 @@
 package com.pm.usersservice.controller;
 
+import com.pm.usersservice.dto.FindOrCreateRequestDTO;
 import com.pm.usersservice.dto.UserRequestDTO;
 import com.pm.usersservice.dto.UserResponseDTO;
-import com.pm.usersservice.model.User;
 import com.pm.usersservice.service.UsersService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -28,6 +28,11 @@ public class UsersController {
         return ResponseEntity.ok(usersService.getUser(userID));
     }
 
+    @GetMapping("/{userID}/validate")
+    public ResponseEntity<Boolean> validateUser(@PathVariable UUID userID) {
+        return ResponseEntity.ok(usersService.validateUser(userID));
+    }
+
     @PostMapping("/register")
     public ResponseEntity<UserResponseDTO> registerUser(@Valid @RequestBody UserRequestDTO body) {
         return ResponseEntity.ok(usersService.registerUser(body));
@@ -41,5 +46,15 @@ public class UsersController {
     @DeleteMapping("/{userID}")
     public ResponseEntity<String> deleteUser(@PathVariable UUID userID) {
         return ResponseEntity.ok(usersService.deleteUser(userID));
+    }
+
+    @GetMapping(value = "/email/{emailId}")
+    public ResponseEntity<UserResponseDTO> getUserByEmailId(@PathVariable String emailId) {
+        return ResponseEntity.ok(usersService.getUserByEmailId(emailId));
+    }
+
+    @PostMapping("/find-or-create")
+    public ResponseEntity<UserResponseDTO> findOrCreateUser(@Valid @RequestBody FindOrCreateRequestDTO body) {
+        return ResponseEntity.ok(usersService.findOrCreateProviderUser(body));
     }
 }
