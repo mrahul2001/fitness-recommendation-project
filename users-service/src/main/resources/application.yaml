@@ -27,3 +27,6 @@ eureka:
       defaultZone: http://localhost:8080/eureka
   instance:
     prefer-ip-address: false
+
+jwt:
+  secret: your-super-secret-key-your-super-secret-key

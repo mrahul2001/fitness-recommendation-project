@@ -1,6 +1,9 @@
-package com.pm.activitiesservice.model;
+package com.oauth.recommendationservice.model;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -11,28 +14,17 @@ import java.time.LocalDateTime;
 import java.util.Map;
 import java.util.UUID;
 
-@Document(collection = "activities")
-@Data
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
-public class Activity {
-    @Id
-    private String ID;
 
+@Data
+public class Activity {
+    private String ID;
     private UUID userID;
     private ActivityType activityType;
     private Integer durationInMinutes;
     private Integer caloriesBurnt;
     private LocalDateTime startTime;
-
-    @Field("metrics")
     private Map<String, Object> additionalMetrics;
-
-    @CreatedDate
     private LocalDateTime createdAt;
-
-    @LastModifiedDate
     private LocalDateTime updatedAt;
 
 }

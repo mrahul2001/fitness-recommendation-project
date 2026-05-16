@@ -1,6 +1,7 @@
 package com.pm.usersservice.controller;
 
 import com.pm.usersservice.dto.FindOrCreateRequestDTO;
+import com.pm.usersservice.dto.LoginRequestDTO;
 import com.pm.usersservice.dto.UserRequestDTO;
 import com.pm.usersservice.dto.UserResponseDTO;
 import com.pm.usersservice.service.UsersService;
@@ -56,5 +57,11 @@ public class UsersController {
     @PostMapping("/find-or-create")
     public ResponseEntity<UserResponseDTO> findOrCreateUser(@Valid @RequestBody FindOrCreateRequestDTO body) {
         return ResponseEntity.ok(usersService.findOrCreateProviderUser(body));
+    }
+
+    @PostMapping("/validate-login")
+    public ResponseEntity<UserResponseDTO> validateLogin(@RequestBody LoginRequestDTO body) {
+
+        return ResponseEntity.ok(usersService.validateLogin(body.getEmail(), body.getPassword()));
     }
 }

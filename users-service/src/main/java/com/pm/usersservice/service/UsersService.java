@@ -133,13 +133,27 @@ public class UsersService {
         user.setLastName(userRequestDTO.getLastName());
         user.setPassword(passwordEncoder.encode(userRequestDTO.getPassword()));
         user.setRole(userRequestDTO.getUserRole() != null ? userRequestDTO.getUserRole() : UserRole.USER);
-        user.setAuthProvider(userRequestDTO.getAuthProvider() != null ? userRequestDTO.getAuthProvider() : AuthProvider.LOCALE);
-        user.setProviderId(userRequestDTO.getProviderId());
+        user.setAuthProvider(AuthProvider.LOCALE);
 
         return user;
     }
 
     public Boolean validateUser(UUID userID) {
         return usersRepository.existsById(userID);
+    }
+
+    public UserResponseDTO validateLogin(String email, String password) {
+        User user = usersRepository.findByEmail(email)
+                .orElseThrow(() -> new UserNotFoundException(email));
+
+        if (user.getAuthProvider() != AuthProvider.LOCALE) {
+            throw new RuntimeException("Use Google Login");
+        }
+
+        if (!passwordEncoder.matches(password, user.getPassword())) {
+            throw new RuntimeException("Passwords do not match");
+        }
+
+        return UserModelToUserResponseDTO(user);
     }
 }
