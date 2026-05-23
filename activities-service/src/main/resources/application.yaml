@@ -3,7 +3,7 @@ spring:
     name: activities-service
   cloud:
     client:
-      hostname: localhost
+      hostname: fitness-recommendation-project
   mongodb:
     uri: mongodb://rahul2711:Ranaghat1@localhost:27018/activities-db?authSource=admin
     representation:

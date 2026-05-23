@@ -18,10 +18,10 @@ import reactor.core.publisher.Mono;
 
 import java.time.Duration;
 
+@Slf4j
 @RestController
 @RequestMapping("/api/gateway")
 @RequiredArgsConstructor
-@Slf4j
 public class GatewayController {
 
     private final WebClient.Builder webClientBuilder;
@@ -31,40 +31,28 @@ public class GatewayController {
     private String userServiceUrl;
 
     @PostMapping("/login")
-    public Mono<ResponseEntity<String>> login(
-            @RequestBody LoginRequestDTO body,
-            ServerHttpResponse response) {
+    public Mono<ResponseEntity<String>> login(@RequestBody LoginRequestDTO body, ServerHttpResponse response) {
 
-        log.info("Login attempt for email: {}", body.getEmail());
+        log.info("Login attempt — email: {}", body.getEmail());
 
         return webClientBuilder.build()
                 .post()
                 .uri(userServiceUrl + "/api/users/validate-login")
                 .bodyValue(body)
                 .retrieve()
-                .onStatus(
-                        HttpStatusCode::is4xxClientError,
-                        res -> {
-                            log.info("Login failed for email: {} — status: {}", body.getEmail(), res.statusCode());
-                            return Mono.error(new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Invalid credentials"));
-                        }
-                )
-                .onStatus(
-                        HttpStatusCode::is5xxServerError,
-                        res -> {
-                            log.info("User service error for email: {} — status: {}", body.getEmail(), res.statusCode());
-                            return Mono.error(new ResponseStatusException(HttpStatus.BAD_GATEWAY, "User service unavailable"));
-                        }
-                )
+                .onStatus(HttpStatusCode::is4xxClientError, res -> {
+                    log.warn("Login failed — email: {}, status: {}", body.getEmail(), res.statusCode());
+                    return Mono.error(new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Invalid credentials"));
+                })
+                .onStatus(HttpStatusCode::is5xxServerError, res -> {
+                    log.error("User service error — email: {}, status: {}", body.getEmail(), res.statusCode());
+                    return Mono.error(new ResponseStatusException(HttpStatus.BAD_GATEWAY, "User service unavailable"));
+                })
                 .bodyToMono(UserResponseDTO.class)
                 .map(user -> {
-                    log.info("User validated successfully — id: {}, email: {}", user.getId(), user.getEmail());
+                    log.info("User validated — id: {}, email: {}", user.getId(), user.getEmail());
 
-                    String token = jwtService.generateToken(
-                            user.getId().toString(),
-                            user.getEmail()
-                    );
-                    log.info("JWT generated for user id: {}", user.getId());
+                    String token = jwtService.generateToken(user.getId().toString(), user.getEmail());
 
                     ResponseCookie cookie = ResponseCookie.from("accessToken", token)
                             .httpOnly(true)
@@ -75,14 +63,13 @@ public class GatewayController {
                             .build();
 
                     response.addCookie(cookie);
-                    log.info("accessToken cookie set for user id: {}", user.getId());
+                    log.info("accessToken cookie set — userId: {}", user.getId());
 
-                    return ResponseEntity.ok("Login Successful");
+                    return ResponseEntity.ok("Login successful");
                 })
                 .onErrorResume(ResponseStatusException.class, ex -> {
-                    log.info("Returning error response — status: {}, reason: {}", ex.getStatusCode(), ex.getReason());
-                    return Mono.just(ResponseEntity.status(ex.getStatusCode())
-                            .body(ex.getReason()));
+                    log.warn("Returning error — status: {}, reason: {}", ex.getStatusCode(), ex.getReason());
+                    return Mono.just(ResponseEntity.status(ex.getStatusCode()).body(ex.getReason()));
                 });
     }
 }

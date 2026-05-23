@@ -4,6 +4,7 @@ import com.pm.gateway.dto.LoginRequestDTO;
 import com.pm.gateway.dto.UserResponseDTO;
 import com.pm.gateway.service.JwtService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseCookie;
 import org.springframework.security.core.Authentication;
@@ -17,6 +18,7 @@ import reactor.core.publisher.Mono;
 import java.net.URI;
 import java.time.Duration;
 
+@Slf4j
 @Component
 @RequiredArgsConstructor
 public class OAuth2SuccessHandler implements ServerAuthenticationSuccessHandler {
@@ -24,16 +26,19 @@ public class OAuth2SuccessHandler implements ServerAuthenticationSuccessHandler 
     private final WebClient.Builder webClientBuilder;
     private final JwtService jwtService;
 
-
     @Override
     public Mono<Void> onAuthenticationSuccess(WebFilterExchange exchange, Authentication authentication) {
 
         OAuth2User user = (OAuth2User) authentication.getPrincipal();
 
+        String email = user.getAttribute("email");
+        String providerId = user.getAttribute("sub");
+
+        log.info("OAuth2 login success — email: {}, providerId: {}", email, providerId);
+
         LoginRequestDTO dto = new LoginRequestDTO();
-        dto.setEmail(user.getAttribute("email"));
-        dto.setPassword(user.getAttribute("password"));
-        dto.setProviderId(user.getAttribute("sub"));
+        dto.setEmail(email);
+        dto.setProviderId(providerId);
 
         return webClientBuilder.build()
                 .post()
@@ -41,7 +46,9 @@ public class OAuth2SuccessHandler implements ServerAuthenticationSuccessHandler 
                 .bodyValue(dto)
                 .retrieve()
                 .bodyToMono(UserResponseDTO.class)
-                .flatMap(savedUser-> {
+                .flatMap(savedUser -> {
+                    log.info("User resolved — id: {}, email: {}", savedUser.getId(), savedUser.getEmail());
+
                     String token = jwtService.generateToken(savedUser.getId().toString(), savedUser.getEmail());
 
                     ResponseCookie responseCookie = ResponseCookie.from("accessToken", token)
@@ -57,6 +64,7 @@ public class OAuth2SuccessHandler implements ServerAuthenticationSuccessHandler 
                     exchange.getExchange().getResponse().getHeaders().setLocation(URI.create("http://localhost:3000/home"));
 
                     return exchange.getExchange().getResponse().setComplete();
-                });
+                })
+                .doOnError(e -> log.error("OAuth2 flow failed — email: {}, error: {}", email, e.getMessage()));
     }
 }
