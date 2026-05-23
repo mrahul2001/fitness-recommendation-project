@@ -4,19 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bd9cf76-e4d5-43ef-b5fd-dcfa10614861" name="Changes" comment="Server Security implementation">
-      <change afterPath="$PROJECT_DIR$/activities-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recommendation-service/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="7bd9cf76-e4d5-43ef-b5fd-dcfa10614861" name="Changes" comment="dockerization">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/activities-service/src/main/java/com/pm/activitiesservice/config/WebClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/activities-service/src/main/java/com/pm/activitiesservice/config/WebClientConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/activities-service/src/main/java/com/pm/activitiesservice/service/UserValidationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/activities-service/src/main/java/com/pm/activitiesservice/service/UserValidationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/activities-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/activities-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/pm/gateway/config/OAuth2SuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/pm/gateway/config/OAuth2SuccessHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/pm/gateway/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/pm/gateway/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/pm/gateway/controller/GatewayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/pm/gateway/controller/GatewayController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/com/pm/usersservice/filter/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/java/com/pm/usersservice/filter/JwtAuthenticationFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -438,7 +434,7 @@
       <workItem from="1778866463599" duration="860000" />
       <workItem from="1778924398967" duration="4036000" />
       <workItem from="1778934781972" duration="501000" />
-      <workItem from="1779512598184" duration="3275000" />
+      <workItem from="1779512598184" duration="10175000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -496,11 +492,22 @@
       <option name="project" value="LOCAL" />
       <updated>1778927099365</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="dockerization">
+      <option name="closed" value="true" />
+      <created>1779516202839</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1779516202843</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
@@ -509,7 +516,8 @@
     <MESSAGE value="eureka service implementation" />
     <MESSAGE value="RabbitMQ service implementation" />
     <MESSAGE value="Server Security implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Server Security implementation" />
+    <MESSAGE value="dockerization" />
+    <option name="LAST_COMMIT_MESSAGE" value="dockerization" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/fitness_recommendation_app$ActivitiesServiceApplication.ic" NAME="ActivitiesServiceApplication Coverage Results" MODIFIED="1776957643628" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />

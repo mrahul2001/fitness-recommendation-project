@@ -1,0 +1,59 @@
+spring:
+  application:
+    name: gateway
+  cloud:
+    client:
+      hostname: fitness-recommendation-project
+    gateway:
+      server:
+        webflux:
+          routes:
+          - id: users-service
+            uri: http://users-service:4001
+            predicates:
+              - Path=/api/users/**
+
+          - id: activities-service
+            uri: http://activities-service:4002
+            predicates:
+              - Path=/api/activities/**
+
+          - id: recommendations-service
+            uri: http://recommendations-service:4004
+            predicates:
+              - Path=/api/recommendations/**
+
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: ${GOOGLE_CLIENT_ID}
+            client-secret: ${GOOGLE_CLIENT_SECRET}
+            scope:
+              - openid
+              - profile
+              - email
+
+server:
+  port: 4003
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka:8080/eureka
+  instance:
+    prefer-ip-address: false
+
+
+jwt:
+  secret: ${JWT_SECRET}
+  expiry: 86400000
+
+services:
+  user-service:
+    url: http://users-service:4001
+
+logging:
+  level:
+    com.pm.gateway: INFO

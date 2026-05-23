@@ -1,22 +1,26 @@
 spring:
   application:
-    name: activities-service
+    name: recommendation-service
   cloud:
     client:
       hostname: fitness-recommendation-project
   mongodb:
-    uri: mongodb://rahul2711:Ranaghat1@mongo:27017/activities-db?authSource=admin
-    representation:
-      uuid: standard
+    uri: mongodb://rahul2711:Ranaghat1@mongo:27017/fitnessRecommendations-db?authSource=admin
+
 server:
-  port: 4002
+  port: 4004
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8080/eureka
+      defaultZone: http://eureka:8080/eureka
   instance:
     prefer-ip-address: false
+
+gemini:
+  api:
+    key: ${GEMINI_API_KEY}
+  model: gemini-3-flash-preview
 
 rabbitmq:
   exchange:

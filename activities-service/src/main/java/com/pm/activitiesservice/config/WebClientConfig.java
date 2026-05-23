@@ -16,7 +16,7 @@ public class WebClientConfig {
     @Bean
     public WebClient userServiceWebClient(WebClient.Builder builder) {
         return builder
-                .baseUrl("http://localhost:4001")
+                .baseUrl("http://users-service:4001")
                 .build();
     }
 }

@@ -18,19 +18,20 @@ public class UserValidationService {
     private final WebClient userServiceWebClient;
 
     public boolean validateUser(UUID userId) {
+
         try {
-            return Boolean.TRUE.equals(userServiceWebClient
+            Boolean response = userServiceWebClient
                     .get()
                     .uri("/api/users/{userId}/validate", userId)
                     .retrieve()
                     .bodyToMono(Boolean.class)
-                    .block());
-        } catch (WebClientResponseException e) {
-            if (e.getStatusCode() == HttpStatus.NOT_FOUND) {
-                throw new UserNotFoundException("User not found with id: " + userId);
-            }
+                    .block();
 
-            return  false;
+            log.info("Validation response = {}", response);
+            return Boolean.TRUE.equals(response);
+        } catch (Exception e) {
+            log.error("Validation failed", e);
+            throw e;
         }
     }
 }

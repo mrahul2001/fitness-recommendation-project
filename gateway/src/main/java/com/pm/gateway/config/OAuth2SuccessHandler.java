@@ -42,7 +42,7 @@ public class OAuth2SuccessHandler implements ServerAuthenticationSuccessHandler 
 
         return webClientBuilder.build()
                 .post()
-                .uri("http://localhost:4001/api/users/find-or-create")
+                .uri("http://users-service/api/users/find-or-create")
                 .bodyValue(dto)
                 .retrieve()
                 .bodyToMono(UserResponseDTO.class)

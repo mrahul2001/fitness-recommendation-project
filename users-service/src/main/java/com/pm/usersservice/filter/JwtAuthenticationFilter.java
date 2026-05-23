@@ -35,7 +35,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
         String path = request.getRequestURI();
 
-        if (PUBLIC_ENDPOINTS.contains(path)) {
+        if (PUBLIC_ENDPOINTS.contains(path) || path.matches("^/api/users/.*/validate$")) {
             filterChain.doFilter(request, response);
             return;
         }
