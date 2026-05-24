@@ -4,8 +4,10 @@ spring:
   cloud:
     client:
       hostname: fitness-recommendation-project
+  rabbitmq:
+    addresses: amqps://hiorewpd:gUnzN8EgvlPx2QuZoPirHjh4i0B9bshC@lionfish.rmq.cloudamqp.com/hiorewpd
   mongodb:
-    uri: mongodb://rahul2711:Ranaghat1@mongo:27017/activities-db?authSource=admin
+    uri: mongodb+srv://mitrarahul2001_db_user:s0dX5mtHSbx8ekrA@fitness-recommendations.urspfgt.mongodb.net/activities-db?retryWrites=true&w=majority
     representation:
       uuid: standard
 server:
@@ -14,7 +16,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8080/eureka
+      defaultZone: http://eureka:8080/eureka
   instance:
     prefer-ip-address: false
 

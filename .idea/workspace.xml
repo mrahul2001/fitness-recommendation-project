@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bd9cf76-e4d5-43ef-b5fd-dcfa10614861" name="Changes" comment="dockerization">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/activities-service/src/main/java/com/pm/activitiesservice/config/WebClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/activities-service/src/main/java/com/pm/activitiesservice/config/WebClientConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/activities-service/src/main/java/com/pm/activitiesservice/service/UserValidationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/activities-service/src/main/java/com/pm/activitiesservice/service/UserValidationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/activities-service/src/main/java/com/pm/activitiesservice/config/MongoConfig.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/activities-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/activities-service/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/pm/gateway/config/OAuth2SuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/pm/gateway/config/OAuth2SuccessHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/com/pm/usersservice/filter/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/java/com/pm/usersservice/filter/JwtAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recommendation-service/src/main/java/com/oauth/recommendationservice/config/MongoConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/recommendation-service/src/main/java/com/oauth/recommendationservice/config/MongoConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recommendation-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/recommendation-service/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,57 +73,57 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ActivitiesServiceApplication.executor": "Debug",
-    "Docker.activites-service-db.executor": "Run",
-    "Docker.activities-recommendation-service-db.executor": "Run",
-    "Docker.activities-service-db.executor": "Run",
-    "Docker.activities-service.executor": "Run",
-    "Docker.rabbitmq.executor": "Run",
-    "Docker.users-service-db.executor": "Run",
-    "Docker.users-service.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Spring Boot.ActivitiesServiceApplication.executor": "Run",
-    "Spring Boot.AuthServiceApplication.executor": "Run",
-    "Spring Boot.EurekaApplication.executor": "Run",
-    "Spring Boot.FitnessRecommendationAppApplication.executor": "Run",
-    "Spring Boot.GatewayApplication.executor": "Run",
-    "Spring Boot.RecommendationServiceApplication.executor": "Run",
-    "Spring Boot.UsersServiceApplication.executor": "Run",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "master",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/mitra/Desktop/fitness-recommendation-app/recommendation-service",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "profiler.jvm",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ActivitiesServiceApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Docker.activites-service-db.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.activities-recommendation-service-db.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.activities-service-db.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.activities-service.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.rabbitmq.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.users-service-db.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.users-service.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ActivitiesServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.AuthServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.EurekaApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.FitnessRecommendationAppApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.GatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.RecommendationServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.UsersServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mitra/Desktop/fitness-recommendation-app/recommendation-service&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;profiler.jvm&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mongo",
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mongo&quot;,
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\mitra\Desktop\fitness-recommendation-app\recommendation-service" />
@@ -434,7 +431,11 @@
       <workItem from="1778866463599" duration="860000" />
       <workItem from="1778924398967" duration="4036000" />
       <workItem from="1778934781972" duration="501000" />
-      <workItem from="1779512598184" duration="10175000" />
+      <workItem from="1779512598184" duration="10504000" />
+      <workItem from="1779529707661" duration="666000" />
+      <workItem from="1779599730927" duration="3910000" />
+      <workItem from="1779618284466" duration="4829000" />
+      <workItem from="1779633767688" duration="631000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -500,7 +501,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779516202843</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="dockerization">
+      <option name="closed" value="true" />
+      <created>1779524164190</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1779524164192</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

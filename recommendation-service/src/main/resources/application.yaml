@@ -1,11 +1,13 @@
 spring:
   application:
     name: recommendation-service
+  rabbitmq:
+    addresses: amqps://hiorewpd:gUnzN8EgvlPx2QuZoPirHjh4i0B9bshC@lionfish.rmq.cloudamqp.com/hiorewpd
   cloud:
     client:
       hostname: fitness-recommendation-project
   mongodb:
-    uri: mongodb://rahul2711:Ranaghat1@mongo:27017/fitnessRecommendations-db?authSource=admin
+    uri: mongodb+srv://mitrarahul2001_db_user:s0dX5mtHSbx8ekrA@fitness-recommendations.urspfgt.mongodb.net/fitnessRecommendations-db?retryWrites=true&w=majority
 
 server:
   port: 4004
